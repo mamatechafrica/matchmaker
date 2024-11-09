@@ -19,11 +19,20 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="container">
+  <body>
+      <!-- Notifications (Notice, Alert) -->
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+      <!-- Navbar -->
     <%= render "shared/navbar" %>
-    <%= yield %>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <%= yield %> <!-- This is where the page-specific content will be rendered -->
+    </div>
+
+    <!-- Footer -->
     <%= render "shared/footer" %>
   </body>
 </html>
