@@ -1,4 +1,4 @@
-<%= form_with(model: mentee) do |form| %>
+<%= app_form_with model: @mentee do |f| %>
   <% if mentee.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(mentee.errors.count, "error") %> prohibited this mentee from being saved:</h2>
@@ -12,26 +12,22 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= f.input :name, style: "display: block" %>
   </div>
 
   <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= f.input :email, style: "display: block" %>
   </div>
 
   <div>
-    <%= form.label :bio, style: "display: block" %>
-    <%= form.text_area :bio %>
+    <%= f.input :bio %>
   </div>
 
   <div>
-    <%= form.label :areas_of_interest, style: "display: block" %>
-    <%= form.text_area :areas_of_interest %>
+    <%= f.input :areas_of_interest %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>
