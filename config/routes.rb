@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :messages
   devise_for :users
   get "terms/index", to: "terms#index", as: "terms"
   get "privacy_policy/index", to: "privacy_policy#index", as: "privacy_policy"
