@@ -61,8 +61,8 @@ Rails.application.configure do
   # Enable live compilation of assets
   config.assets.compile = true
 
-# Debug mode disables concatenation and preprocessing of assets.
-  config.assets.debug = true  
+  # Debug mode disables concatenation and preprocessing of assets.
+  config.assets.debug = true
 
 
   # Raises error for missing translations.
