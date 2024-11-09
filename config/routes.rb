@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get "dashboard", to: "dashboard#index", as: "dashboard"
   get "contact", to: "contact#index", as: "contact"
   get "landing/index"
+  resources :privacy_policy, only: [ :index ]
+  resources :terms, only: [ :index ]
+  resources :dashboard, only: [ :index ]
   resources :mentors
   resources :mentees
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
