@@ -57,3 +57,5 @@ gem "sassc-rails", "~> 2.1", ">= 2.1.2"
 gem "dotenv-rails"
 gem "mongo", "~> 2.20" # Use the latest version before 2.21.0
 gem "font-awesome-rails"
+
+gem "devise", "~> 4.9"
