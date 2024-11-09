@@ -17,6 +17,11 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
+# Active Storage facilitates uploading files to a cloud storage service like Amazon S3, Google Cloud Storage, or Microsoft Azure Storage and attaching those files to Active Record objects. I
+gem "image_processing", ">= 1.2"
+
+gem "activestorage" # Adjust the version according to your Rails version
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -59,3 +64,4 @@ gem "mongo", "~> 2.20" # Use the latest version before 2.21.0
 gem "font-awesome-rails"
 
 gem "devise", "~> 4.9"
+# Gemfile
