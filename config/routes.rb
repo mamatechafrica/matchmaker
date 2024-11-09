@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   resources :privacy_policy, only: [ :index ]
   resources :terms, only: [ :index ]
   resources :dashboard, only: [ :index ]
-  resources :mentors, only: [ :index, :show ]
-  resources :mentees, only: [ :index, :show ]
+  resources :mentors
+  resources :mentees
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
