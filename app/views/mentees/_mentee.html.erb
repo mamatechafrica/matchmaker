@@ -1,4 +1,10 @@
 <div id="<%= dom_id mentee %>">
+  <div id="<%= dom_id mentee %>">
+    <% if mentee.image? %>  <!-- Check if the image exists -->
+      <%= image_tag mentee.image.url %>  <!-- Display the image -->
+    <% end %>
+  </div>
+  
   <p>
     <strong>Name:</strong>
     <%= mentee.name %>

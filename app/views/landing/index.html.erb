@@ -4,6 +4,9 @@
 <div class="row">
     <% @mentors.each do |mentor| %>
         <div class="col-md-4">
+            <% if mentor.image? %>  <!-- Check if the image exists -->
+                <%= image_tag mentor.image.url %>  <!-- Display the image -->
+            <% end %>
         <h3><%= mentor.name %></h3>
         <p><%= mentor.bio %></p>
         <p>Industry: <%= mentor.industry %></p>
@@ -17,6 +20,9 @@
 <div class="row">
     <% @mentees.each do |mentee| %>
         <div class="col-md-4">
+            <% if mentee.image? %>  <!-- Check if the image exists -->
+            <%= image_tag mentee.image.url %>  <!-- Display the image -->
+        <% end %>
         <h3><%= mentee.name %></h3>
         <p><%= mentee.bio %></p>
         <p>Area of Interest: <%= mentee.areas_of_interest %></p>
