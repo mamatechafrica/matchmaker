@@ -65,6 +65,6 @@ class MentorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mentor_params
-      params.require(:mentor).permit(:name, :email, :expertise, :years_of_experience)
+      params.require(:mentor).permit(:name, :email, :expertise, :years_of_experience, :image)
     end
 end

@@ -64,3 +64,5 @@ gem "mongo", "~> 2.20" # Use the latest version before 2.21.0
 gem "font-awesome-rails"
 
 gem "devise", "~> 4.9"
+gem "carrierwave", "~> 3.0"
+gem "carrierwave-mongoid"

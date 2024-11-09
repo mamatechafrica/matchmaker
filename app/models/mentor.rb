@@ -7,4 +7,8 @@ class Mentor
   field :industry, type: String
   field :bio, type: String
   field :years_of_experience, type: Integer
+  field :image, type: String  # Store the file name or path
+
+  # Mount the uploader to the image field
+  mount_uploader :image, ImageUploader
 end
