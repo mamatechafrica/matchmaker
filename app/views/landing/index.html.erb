@@ -1,80 +1,109 @@
 <!-- Landing Page Section -->
-<section class="container text-center my-5">
+<section class="container text-center my-3">
     <h1>Welcome to Mentorship Matchmaker</h1>
     <p>Connecting women in tech with mentors for personal and professional growth.</p>
-    <a href="#" class="btn btn-custom">Get Started</a>
-</section>
 
-<section class="container">
-    <div class="row">
-      <!-- Mentor Card -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            Mentor: Jane Doe
-          </div>
-          <div class="card-image">
-
-          </div>
+    <div class="row my-4">
+      <!-- For Mentees Card -->
+      <div class="col-md-6 d-flex">
+        <div class="card w-100 rounded">
           <div class="card-body">
-            <p><strong>Expertise:</strong> Fullstack Development</p>
-            <p><strong>Challenges:</strong> Helping mentees overcome imposter syndrome.</p>
-            <p><strong>Area of Interest:</strong> Web Development, JavaScript</p>
+            <h3 class="h4 card-title">For Mentees</h3>
+            <p class="card-text">
+              Designed for women transitioning into tech or looking to advance in their careers, the platform allows mentees to create personalized profiles highlighting their goals, challenges, and aspirations.
+            </p>
           </div>
         </div>
       </div>
-
-      <!-- Mentee Card -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            Mentee: Sarah Lee
-          </div>
-          <div class="card-image">
-
-          </div>
+    
+      <!-- For Mentors Card -->
+      <div class="col-md-6 d-flex">
+        <div class="card w-100 rounded">
           <div class="card-body">
-            <p><strong>Challenges:</strong> Need guidance on backend technologies.</p>
-            <p><strong>Area of Interest:</strong> Data Science, Python</p>
+            <h3 class="h4 card-title">For Mentors</h3>
+            <p class="card-text">
+              Mentors can showcase their expertise and experiences, making it easier for mentees to find the right match.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+    
 
+  <div class="my-4">
+    <h3 class="h4">AI-Enhanced Matchmaking</h3>
+    <p>
+      Through AI-enhanced matchmaking, real-time communication, and a feedback system, Mentorship Matchmaker fosters a supportive, empowering community where both mentors and mentees can grow together.
+    </p>
+  </div>
 
-<section class="container">
-    <div class="row">
-    <h2>Featured Mentors</h2>
-        <% @mentors.each do |mentor| %>
-            <div class="col-md-4">
-                <% if mentor.image? %>  <!-- Check if the image exists -->
-                    <%= image_tag mentor.image.url %>  <!-- Display the image -->
-                <% end %>
-            <h3><%= mentor.name %></h3>
-            <p><%= mentor.bio %></p>
-            <p>Industry: <%= mentor.industry %></p>
-            <p>Expertise: <%= mentor.expertise %></p>
-            <%= link_to 'View Profile', mentor_path(mentor), class: 'btn btn-primary' %>
+  <div class="my-4">
+    <h3 class="h4">Your Journey to Success</h3>
+    <p>
+      Whether you’re just starting out or looking to level up, Mentorship Matchmaker is here to help you find the guidance you need to succeed.
+    </p>
+  </div>
+  
+  <a href="#sign-up" class="btn btn-outline-primary mt-4">Get Started</a>
+</section>
+
+<section class="container my-5">
+
+<!-- Mentee Card -->     
+  <div class="row"> 
+    <h2>Featured Mentees</h2> 
+    <% @mentees.each do |mentee| %>   
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <%= mentee.name %>
             </div>
+            <div class="card-image">
+              <% if mentee.image? %>
+                <%= image_tag mentee.image.url, class: 'card-img-top' %>
+              <% end %>
+            </div>
+            <div class="card-body">
+              <p><strong><i class="bi bi-person-circle"></i></strong> <%= mentee.bio %></p>
+              <p><strong>Area of Interest: </strong><%= mentee.areas_of_interest %></p>
+            </div>
+            <div class="card-footer">
+              <%= link_to 'View Profile', mentee_path(mentee), class: 'btn btn-outline-primary' %>
+            </div>
+          </div>
+        </div>
         <% end %>
     </div>
-    
-    <h2>Featured Mentees</h2>
 
-        <% @mentees.each do |mentee| %>
-            <div class="col-md-4">
-                <% if mentee.image? %>  <!-- Check if the image exists -->
-                <%= image_tag mentee.image.url %>  <!-- Display the image -->
-            <% end %>
-            <h3><%= mentee.name %></h3>
-            <p><%= mentee.bio %></p>
-            <p>Area of Interest: <%= mentee.areas_of_interest %></p>
-            <p>Challenges: <%= mentee.challenges %></p>
-            <%= link_to 'View Profile', mentee_path(mentee), class: 'btn btn-primary' %>
+<!-- Mentor Card -->
+    <div class="row">
+      <h2>Featured Mentors</h2>
+      <% @mentors.each do |mentor| %>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <%= mentor.name %>
             </div>
-        <% end %>
-    
+            <div class="card-image">
+              <% if mentor.image? %>
+                <%= image_tag mentor.image.url, class: 'card-img-top' %>
+              <% end %>
+            </div>
+            <div class="card-body">
+              <p><strong><i class="bi bi-person-circle"></i></strong> <%= mentor.bio %></p>
+              <p><strong>Expertise: </strong><%= mentor.expertise %></p>
+            </div>
+            <div class="card-footer">
+              <%= link_to 'View Profile', mentor_path(mentor), class: 'btn btn-outline-primary' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
 </section>
 
+<section class="container text-center my-5 pb-2">
+  <h2>Join Our Community of Women in Tech</h2>
+  <p>Whether you're looking for guidance or want to share your expertise, we have a place for you.</p>
+  <a href="#" class="btn btn-primary">Sign Up Now</a>
+</section>

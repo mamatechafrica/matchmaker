@@ -19,19 +19,52 @@ body {
   background-color: #fff4f0;
 }
 
+/* Navbar styling */
 .navbar {
   background-color: #703030;
 }
+
 .navbar-logo {
-  height: 140px;
+  height: 120px;
 }
 
 .navbar-nav .nav-link {
   color: #fff;
 }
+
 .navbar-nav .nav-link:hover {
   color: #904848;
 }
+
+/* Welcome text styling */
+.welcome-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds spacing between welcome text and button */
+}
+
+.welcome-text {
+  color: #fff4f0; /* Matches navbar text color */
+  font-size: 0.9rem; /* Adjust font size if needed */
+  margin: 0; /* Remove default margin */
+}
+
+/* Sign out button styling */
+.btn-signout {
+  background-color: #904848;
+  color: #fff4f0;
+  border: none;
+}
+
+.btn-signout:hover {
+  background-color: #501818;
+}
+
+/* Add some spacing to prevent the button from feeling cramped */
+.nav-item .btn {
+  margin-left: 10px;
+}
+
 .card {
   border: none;
   margin: 10px 0;
@@ -43,17 +76,81 @@ body {
 .card-body {
   background-color: #f2cccc;
 }
-.btn-custom {
+
+.card-image {
+  height: 200px; /* Set a fixed height for consistency */
+  overflow: hidden; /* Ensure image doesn't overflow */
   background-color: #703030;
-  color: #fff;
 }
-.btn-custom:hover {
-  background-color: #904848;
+
+.card-img-top {
+  object-fit: cover; /* Make image cover the entire container */
+  width: 100%; /* Make image responsive */
+  height: 100%; /* Fill the container's height */
+}
+
+.card-footer {
+  background-color: #f2cccc;
+  border: none;
+  padding-top: 10px;
+}
+
+.text {
+  font-size: 0.8rem;
+  color: #ffffff;
 }
 
 .main-content {
   flex: 1; /* Allow content to grow and fill space */
   box-sizing: border-box;
+}
+
+// Buttons
+
+/* Primary Buttons (e.g., Sign In, Sign Up) */
+.btn-primary {
+  background-color: #703030;
+  color: #fff4f0;
+  border-color: #703030;
+
+  &:hover {
+    background-color: #904848;
+    border-color: #904848;
+  }
+}
+
+/* Secondary Buttons (e.g., Forgot Password, Cancel) */
+.btn-secondary {
+  background-color: #904848;
+  color: #fff4f0;
+  border-color: #904848;
+
+  &:hover {
+    background-color: #501818;
+    border-color: #501818;
+  }
+}
+
+/* Disabled State for Buttons */
+.btn:disabled,
+.btn[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+  border-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Outline Buttons */
+.btn-outline-primary {
+  background-color: #fff4f0;
+  color: #703030;
+  border: 1px solid #703030;
+
+  &:hover {
+    background-color: #904848;
+    color: #fff4f0;
+    border-color: #fff4f0;
+  }
 }
 .footer {
   display: flex; /* Use flexbox for centering content */
