@@ -1,33 +1,80 @@
-<h1>Mentorship Matchmaker</h1>
+<!-- Landing Page Section -->
+<section class="container text-center my-5">
+    <h1>Welcome to Mentorship Matchmaker</h1>
+    <p>Connecting women in tech with mentors for personal and professional growth.</p>
+    <a href="#" class="btn btn-custom">Get Started</a>
+</section>
 
-<h2>Featured Mentors</h2>
-<div class="row">
-    <% @mentors.each do |mentor| %>
-        <div class="col-md-4">
-            <% if mentor.image? %>  <!-- Check if the image exists -->
-                <%= image_tag mentor.image.url %>  <!-- Display the image -->
-            <% end %>
-        <h3><%= mentor.name %></h3>
-        <p><%= mentor.bio %></p>
-        <p>Industry: <%= mentor.industry %></p>
-        <p>Expertise: <%= mentor.expertise %></p>
-        <%= link_to 'View Profile', mentor_path(mentor), class: 'btn btn-primary' %>
+<section class="container">
+    <div class="row">
+      <!-- Mentor Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            Mentor: Jane Doe
+          </div>
+          <div class="card-image">
+
+          </div>
+          <div class="card-body">
+            <p><strong>Expertise:</strong> Fullstack Development</p>
+            <p><strong>Challenges:</strong> Helping mentees overcome imposter syndrome.</p>
+            <p><strong>Area of Interest:</strong> Web Development, JavaScript</p>
+          </div>
         </div>
-    <% end %>
-</div>
+      </div>
 
-<h2>Featured Mentees</h2>
-<div class="row">
-    <% @mentees.each do |mentee| %>
-        <div class="col-md-4">
-            <% if mentee.image? %>  <!-- Check if the image exists -->
-            <%= image_tag mentee.image.url %>  <!-- Display the image -->
+      <!-- Mentee Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            Mentee: Sarah Lee
+          </div>
+          <div class="card-image">
+
+          </div>
+          <div class="card-body">
+            <p><strong>Challenges:</strong> Need guidance on backend technologies.</p>
+            <p><strong>Area of Interest:</strong> Data Science, Python</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="container">
+    <div class="row">
+    <h2>Featured Mentors</h2>
+        <% @mentors.each do |mentor| %>
+            <div class="col-md-4">
+                <% if mentor.image? %>  <!-- Check if the image exists -->
+                    <%= image_tag mentor.image.url %>  <!-- Display the image -->
+                <% end %>
+            <h3><%= mentor.name %></h3>
+            <p><%= mentor.bio %></p>
+            <p>Industry: <%= mentor.industry %></p>
+            <p>Expertise: <%= mentor.expertise %></p>
+            <%= link_to 'View Profile', mentor_path(mentor), class: 'btn btn-primary' %>
+            </div>
         <% end %>
-        <h3><%= mentee.name %></h3>
-        <p><%= mentee.bio %></p>
-        <p>Area of Interest: <%= mentee.areas_of_interest %></p>
-        <p>Challenges: <%= mentee.challenges %></p>
-        <%= link_to 'View Profile', mentee_path(mentee), class: 'btn btn-primary' %>
-        </div>
-    <% end %>
-</div>
+    </div>
+    
+    <h2>Featured Mentees</h2>
+
+        <% @mentees.each do |mentee| %>
+            <div class="col-md-4">
+                <% if mentee.image? %>  <!-- Check if the image exists -->
+                <%= image_tag mentee.image.url %>  <!-- Display the image -->
+            <% end %>
+            <h3><%= mentee.name %></h3>
+            <p><%= mentee.bio %></p>
+            <p>Area of Interest: <%= mentee.areas_of_interest %></p>
+            <p>Challenges: <%= mentee.challenges %></p>
+            <%= link_to 'View Profile', mentee_path(mentee), class: 'btn btn-primary' %>
+            </div>
+        <% end %>
+    
+    </div>
+</section>
+

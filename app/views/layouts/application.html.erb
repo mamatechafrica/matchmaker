@@ -20,13 +20,13 @@
   </head>
 
   <body>
-      <!-- Notifications (Notice, Alert) -->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
 
       <!-- Navbar -->
     <%= render "shared/navbar" %>
-
+      <!-- Notifications (Notice, Alert) -->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     <!-- Main Content -->
     <div class="main-content">
       <%= yield %> <!-- This is where the page-specific content will be rendered -->
