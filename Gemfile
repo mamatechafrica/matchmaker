@@ -66,3 +66,5 @@ gem "font-awesome-rails"
 gem "devise", "~> 4.9"
 gem "carrierwave", "~> 3.0"
 gem "carrierwave-mongoid"
+
+gem "stringio", "3.1.2"

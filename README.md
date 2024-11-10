@@ -37,6 +37,7 @@ The app is structured to ensure a seamless user experience while providing robus
 ## What We Learned
 
 Through this project, we gained valuable insights into:
+
 - The intricacies of integrating NoSQL databases with Rails applications.
 - Best practices for deploying applications in a cloud environment.
 - The importance of user feedback in refining our platform.
@@ -49,10 +50,32 @@ Through this project, we gained valuable insights into:
 
 ## Getting Started
 
-To run the project locally, clone the repository and follow these steps:
+<!-- To run the project locally, clone the repository and follow these steps:
 
-1. Install the necessary dependencies:
-   ```bash
-   bundle install
+1.  Install the necessary dependencies:
 
+    ```bash -->
 
+    <!-- bundle install -->
+    ```
+
+1.  Install **Foreman**:
+
+    ```bash
+    gem install foreman
+    ```
+
+1.  Create a `Procfile.dev`:  
+    Make sure your `Procfile.dev` contains the following lines (this file should be in the root of your Rails project):
+
+    ```bash
+    web: bin/rails server -p 3000
+    webpacker: bin/webpack-dev-server
+    ```
+
+1.  Start **Foreman** with the `Procfile.dev`:  
+    Use **Foreman** to start both the Rails server and the Webpack Dev Server with:
+
+    ```bash
+    foreman start -f Procfile.dev
+    ```
