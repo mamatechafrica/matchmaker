@@ -56,7 +56,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "mongoid", "~> 9.0", ">= 9.0.2"
+gem "mongoid", "~> 9.0"
 gem "bootstrap", "~> 5.3", ">= 5.3.3"
 gem "sassc-rails", "~> 2.1", ">= 2.1.2"
 gem "dotenv-rails"
